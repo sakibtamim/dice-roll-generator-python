@@ -1,14 +1,13 @@
 import random
 
-def roll_dice():
 
+def roll_dice():
     while True:
         min_val = 1
         max_val = 6
 
         num_dice = input(f"Number of dice: '1' or '2'\n"
                          f"Choose: ")
-
 
         if num_dice == '2':
             print("Rolling dice...")
@@ -25,8 +24,7 @@ def roll_dice():
                 print('Thank you')
                 break
 
-
-        elif num_dice == '1':
+        else:
             print("Rolling dice...")
             dice_1 = random.randint(min_val, max_val)
 
@@ -36,6 +34,7 @@ def roll_dice():
             if roll_again == 'no':
                 print('Thank you')
                 break
+
 
 if __name__ == '__main__':
     roll_dice()
